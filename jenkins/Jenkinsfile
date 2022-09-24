@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh "echo starting build from feature branch"
                 sh 'mvn -B -DskipTests clean package'
             }
         }
